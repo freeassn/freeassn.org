@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Free Association</title>
+        <link rel="icon" type="image/png" href="/asset/favicon.png" />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <div id="top">
+            <img
+                id="logo"
+                src="asset/logo_mesh.svg"
+                alt="Free Association Logo"
+            />
+            <div id="about" hidden>
+                <h2>about</h2>
+                <br />
+                <p>
+                    In the internet age, email has become one of the most
+                    critically important services that any person uses.
+                    Unfortunately, many people have seemingly become locked into
+                    proprietary email providers that do not respect their
+                    privacy. Free Association has set out to offer a viable
+                    alternative to these providers for those who seek to protect
+                    their privacy and return control over their digital lives to
+                    themselves.
+                    <br />
+                    <br />
+                    Free Association provides low-cost, privacy respecting
+                    hosted email on a fully free-and-open-source software stack.
+                    Currently, we are the primary email provider for about 100
+                    individuals. As of October, 2024 we are in the process of
+                    structuring Free Association as a worker-owned cooperative.
+                </p>
+                <br />
+                <br />
+                <h2>join</h2>
+                <br />
+                <p>
+                    Free Association will not be taking registration for new
+                    mailboxes while we make an organizational transition to
+                    on-premises control of our email hosting infrastructure. We
+                    expect this transition to be complete with public
+                    registration available no later than April 1, 2025.
+                </p>
+            </div>
+        </div>
+        <div id="bottom">
+            <div style="height: min-content">
+                <p id="exupery">
+                    One will weave the canvas; another will fell a tree by the
+                    light of his ax. Yet another will forge nails, and there
+                    will be others who observe the stars to learn how to
+                    navigate. And yet all will be as one. Building a boat isn’t
+                    about weaving canvas, forging nails, or reading the sky.
+                    It’s about giving a shared taste for the sea, by the light
+                    of which you will see nothing contradictory but rather a
+                    community of <span style="color: pink">love</span>.
+                    <b id="abuse" style="display: block; width: max-content"
+                        >admin at freeassn dot org</b
+                    >
+                </p>
+                <br />
+                <a href="https://mail.freeassn.org/SOGo/">webmail</a>
+                <a href="mailto:admin@freeassn.org">join</a>
+                <a href="#" onclick="forceAbout()">about</a>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let timeout = setTimeout(() => {
+            if (window.pageYOffset == 0) {
+                window.scrollTo(0, 10000);
+            }
+        }, 1000);
+
+        let aboutShowing = false;
+        const topdiv = document.getElementById("top");
+        const about = document.getElementById("about");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    about.hidden = !about.hidden;
+                    logo.hidden = !logo.hidden;
+                }
+            });
+        });
+        observer.observe(topdiv);
+
+        function forceAbout() {
+            about.hidden = false;
+            logo.hidden = true;
+        }
+    </script>
+</html>

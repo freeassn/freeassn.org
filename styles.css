@@ -1,0 +1,53 @@
+#exupery,
+a {
+    color: whitesmoke;
+}
+#bottom,
+#top {
+    display: flex;
+}
+@font-face {
+    font-family: "Pretendard Variable";
+    src: url("https://freeassn.org/PretendardStdVariable.ttf") format("ttf");
+}
+html {
+    font-family: "Pretendard Variable", sans-serif;
+    scroll-behavior: smooth;
+}
+#about {
+    max-width: 48vw;
+    text-align: justify;
+}
+#top {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+a {
+    text-decoration: underline;
+}
+#top > img {
+    width: 555px;
+    min-width: 333px;
+}
+#bottom {
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 22px;
+    height: 101vh;
+}
+#exupery {
+    max-width: 255px;
+    white-space: normal;
+    height: fit-content;
+    word-wrap: break-word;
+}
+::selection {
+    color: pink;
+    background-color: #000;
+}
+#logo {
+    max-width: 50vw;
+}
