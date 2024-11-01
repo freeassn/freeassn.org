@@ -15,7 +15,7 @@ html {
     scroll-behavior: smooth;
 }
 #about {
-    max-width: 48vw;
+    max-width: 33vw;
     text-align: justify;
 }
 #top {
@@ -50,4 +50,9 @@ a {
 }
 #logo {
     max-width: 50vw;
+}
+@media (max-width: 800px) {
+    #about {
+        max-width: 80vw;
+    }
 }
