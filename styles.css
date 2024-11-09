@@ -8,7 +8,8 @@ a {
 }
 @font-face {
     font-family: "Pretendard Variable";
-    src: url("https://freeassn.org/PretendardStdVariable.ttf") format("ttf");
+    src: url("https://freeassn.org/asset/PretendardStdVariable.woff2")
+        format("ttf");
 }
 html {
     font-family: "Pretendard Variable", sans-serif;
